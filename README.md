@@ -68,8 +68,7 @@ To understand what data is available, we retrieve and list all the table names i
        o	Outliers are automatically indicated in the boxplot, but we can add scatter points to highlight them explicitly.
        o	This visual representation helps in understanding the extent and impact of the outliers.
 
-       ![]([
-
+    ![]([https://github.com/calua-83/Data-Transformation-and-Exploration/blob/main/outliers.png])
 
  ## Conclusion
  This detailed explanation walks through some of the steps taken in transformation and exploration process . By carefully inspecting, cleaning, and 
