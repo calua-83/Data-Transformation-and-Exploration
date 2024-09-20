@@ -68,6 +68,10 @@ To understand what data is available, we retrieve and list all the table names i
        o	Outliers are automatically indicated in the boxplot, but we can add scatter points to highlight them explicitly.
        o	This visual representation helps in understanding the extent and impact of the outliers.
 
+       ![]([https://github.com/calua-83/Sales_Analysis_Project/blob/main/sales_table.png?raw=true](https://github.com/calua-83/Data-Transformation-and- 
+        Exploration/blob/main/outliers.png?raw=true))
+
+
  ## Conclusion
  This detailed explanation walks through some of the steps taken in transformation and exploration process . By carefully inspecting, cleaning, and 
  visualizing the data ,we are setting a solid foundation for generating insightful sales reports and making data-driven decisions.
