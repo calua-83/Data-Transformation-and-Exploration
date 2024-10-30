@@ -86,4 +86,5 @@ plt.show()
 ```
 ## Conclussion 
 By systematically inspecting, cleaning, and visualizing the data, we have laid a solid foundation for generating valuable sales reports and gaining insights into the Adventure Works sales data.
+all. Please refere to the pythone file for details
 
