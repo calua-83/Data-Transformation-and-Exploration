@@ -26,59 +26,64 @@ Access to the Adventure Works Sales Database (SQLite format).
 ### Database Connection
 First, we establish a connection to the SQLite database that contains the Adventure Works data.
 
-python
-Copy code
+```python
 import sqlite3
 import pandas as pd
 
 # Connect to the SQLite database
 path = r'C:\Users\calua\Desktop\3Signet\Sales_Adventure_Works.db'
 connect = sqlite3.connect(path)
-Retrieving Table Names
+```
+## Retrieving Table Names
 To understand the available data, we retrieve and list all the table names in the database.
 
 python
-Copy code
+```
 # Retrieve table names
 cursor = connect.cursor()
 cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
 tables = cursor.fetchall()
 print(tables)  # Displays all tables in the database
-Data Loading and Preprocessing
+```
+## Data Loading and Preprocessing
 We load tables into pandas DataFrames and preprocess them by:
 
-### Checking for missing values
-Converting data types, e.g., date columns to datetime and numeric columns to float
-Standardizing string columns for consistency
-Example: Normalizing Customer Data
+- Checking for missing values
+- Converting data types, e.g., date columns to datetime and numeric columns to float
+- Standardizing string columns for consistency
+
+### Example: Normalizing Customer Data
+
 python
-Copy code
-# Normalize string columns in the Customers table
+```
+Normalize string columns in the Customers table
 query_Customers['FirstName'] = query_Customers['FirstName'].str.strip().str.capitalize()
 query_Customers['LastName'] = query_Customers['LastName'].str.strip().str.capitalize()
 query_Customers['Prefix'] = query_Customers['Prefix'].str.strip().str.capitalize()
-Outlier Detection
+```
+## Outlier Detection
 We use the Interquartile Range (IQR) method to detect outliers in key columns, such as:
-
 - OrderQuantity in query_sales
 - ReturnQuantity in query_returns
 - AnnualIncome in query_Customers
   
-### Observations:
+## Observations:
 Some ReturnQuantity values are higher than expected.
 High AnnualIncome values suggest possible data entry errors or legitimate high earners.
-Visualizing Outliers
+
+## Visualizing Outliers
 Boxplots are created using Seaborn to visualize outliers, enabling quick identification and assessment of their impact.
+```
 python
-Copy code
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Boxplot for AnnualIncome to visualize outliers
+Boxplot for AnnualIncome to visualize outliers
 plt.figure(figsize=(10, 5))
 sns.boxplot(x=query_Customers['AnnualIncome'])
 plt.title("Boxplot of AnnualIncome to Detect Outliers")
 plt.show()
-Conclusion
+```
+## Conclussion 
 By systematically inspecting, cleaning, and visualizing the data, we have laid a solid foundation for generating valuable sales reports and gaining insights into the Adventure Works sales data.
 
