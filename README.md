@@ -18,10 +18,10 @@ To get started, you will need:
 - Python 3.x
 - SQLite and pandas libraries installed
   
-   bash
-   Copy code
-  
+ ```bash
+   Copy code 
 pip install pandas sqlite3 seaborn matplotlib
+  ```
 Access to the Adventure Works Sales Database (SQLite format).
 ### Database Connection
 First, we establish a connection to the SQLite database that contains the Adventure Works data.
