@@ -15,10 +15,12 @@ The primary aim is to clean and prepare sales data for insightful reporting and 
 
 ### Setup
 To get started, you will need:
-Python 3.x
-SQLite and pandas libraries installed
-bash
-Copy code
+- Python 3.x
+- SQLite and pandas libraries installed
+  
+   bash
+   Copy code
+  
 pip install pandas sqlite3 seaborn matplotlib
 Access to the Adventure Works Sales Database (SQLite format).
 ### Database Connection
